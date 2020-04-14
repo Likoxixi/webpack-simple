@@ -1,0 +1,26 @@
+{
+  "name": "webpack-simple",
+  "version": "1.0.0",
+  "description": "webpack打包器的学习",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Likoxixi/webpack-simple.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Likoxixi/webpack-simple/issues"
+  },
+  "homepage": "https://github.com/Likoxixi/webpack-simple#readme"
+}
