@@ -1,22 +1,26 @@
 const path = require("path");
 
-console.log("--------------打印配置---------------");
-console.log(path);
-console.log(__dirname);
-console.log(__filename);
-console.log("------------打印完成---------");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
     // entry: './src/index.js',
-    entry:{
-        app:"./src/index.js",
-        print:"./src/print.js"
+    entry: {
+        app: "./src/index.js",
+        print: "./src/print.js"
 
     },
     output: {
         // filename: 'bundle.js',
-        filename:"[name].bundle.js",
+        filename: "[name].bundle.js",
         path: path.resolve(__dirname, 'dist')
     },
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            //   title:"测试实验"
+            template: "./src/index.html"
+        })
+    ],
     module: {
         rules: [
             {
@@ -27,13 +31,13 @@ module.exports = {
                 ]
             },
             {
-                test:/\.(png|svg|jpg|gif|jpeg)$/,
-                use:[
+                test: /\.(png|svg|jpg|gif|jpeg)$/,
+                use: [
                     'file-loader'
                 ]
             }
 
         ]
     }
-   
+
 };
