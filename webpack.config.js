@@ -9,6 +9,7 @@ module.exports = {
         print: "./src/print.js"
 
     },
+    
     output: {
         // filename: 'bundle.js',
         filename: "[name].bundle.js",
@@ -16,7 +17,7 @@ module.exports = {
     },
     devtool:"inline-source-map",
     plugins: [
-        new CleanWebpackPlugin(),
+        // new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             //   title:"测试实验"
             template: "./src/index.html"
